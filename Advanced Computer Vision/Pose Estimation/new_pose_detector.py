@@ -12,7 +12,8 @@ while True:
     success, img = cap.read()
     detector.findPose(img)
     lm_list = detector.findPosition(img)
-    print(lm_list)
+    if len(lm_list)!=0:
+        print(lm_list)
 
     cv.imshow('Image', img)
     cv.waitKey(1)
