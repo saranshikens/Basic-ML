@@ -26,8 +26,8 @@ while True:
                 centerX, centerY = int(lm.x*w), int(lm.y*h)
                 print(id, centerX, centerY)
                 # to track a certain part of hand, here the part which has id==0
-                if id==0:
-                    cv.circle(img, (centerX, centerY), 25, (255,0,255), cv.FILLED)
+                # if id==0:
+                cv.circle(img, (centerX, centerY), 25, (255,0,255), cv.FILLED)
 
             mpDraw.draw_landmarks(img, handLms, mpHands.HAND_CONNECTIONS)
 
