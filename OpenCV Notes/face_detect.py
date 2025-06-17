@@ -1,10 +1,10 @@
 import cv2 as cv
 
 img = cv.imread(r'OpenCV Notes\Photos\lady.jpeg')
-# cv.imshow('Lady', img)
+cv.imshow('Lady', img)
 
 gray = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
-# cv.imshow('Gray', gray)
+cv.imshow('Gray', gray)
 
 
 haar_cascade = cv.CascadeClassifier(r'OpenCV Notes\haar_face.xml')
