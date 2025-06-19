@@ -19,7 +19,7 @@ class handDetector:
         )
         self.mpDraw = mp.solutions.drawing_utils
 
-        self.tipIds = [4,8,12,16,20]
+        self.tipIDs = [4,8,12,16,20]
 
     def find_hands(self, img, draw=True):
         imgRGB = cv.cvtColor(img, cv.COLOR_BGR2RGB)
@@ -51,13 +51,13 @@ class handDetector:
     def fingersUp(self):
         fingers = []
         # Thumb of Left Hand
-        if self.lmList[self.tipIDs[0]][1]<self.lmList[self.tipIDs[0]-1][1]:
+        if self.lm_list[self.tipIDs[0]][1]<self.lm_list[self.tipIDs[0]-1][1]:
                 fingers.append(1)
         else:
                 fingers.append(0)
         # Fingers of Left Hand
         for id in range(1,5):
-            if self.lmList[self.tipIDs[id]][2]<self.lmList[self.tipIDs[id]-2][2]:
+            if self.lm_list[self.tipIDs[id]][2]<self.lm_list[self.tipIDs[id]-2][2]:
                 fingers.append(1)
             else:
                 fingers.append(0)
